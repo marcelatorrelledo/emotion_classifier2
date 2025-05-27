@@ -5,9 +5,8 @@ setup(
     version='0.1',
     packages=find_packages(),
     install_requires=[
+        'click',
         'torch',
-        'numpy',
-        'pandas',
         'scikit-learn',
     ],
     entry_points={
