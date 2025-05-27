@@ -1,0 +1,3 @@
+include inference/model_weights.pth
+include inference/vocab.pkl
+include inference/label_encoder.pkl
