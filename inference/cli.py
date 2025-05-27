@@ -21,20 +21,17 @@ def main(input, kaggle):
         return
 
     # Load resources
-    from pathlib import Path
     import inference
-    
     base_path = Path(inference.__file__).parent
-    
+
     vocab_path = base_path / "vocab.pkl"
     label_encoder_path = base_path / "label_encoder.pkl"
     model_path = base_path / "model_weights.pth"
 
-
     with open(vocab_path, "rb") as f:
         vocab = pickle.load(f)
 
-    with open(label_path, "rb") as f:
+    with open(label_encoder_path, "rb") as f:
         label_encoder = pickle.load(f)
 
     pad_idx = vocab.get("<PAD>", 0)
